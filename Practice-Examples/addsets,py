@@ -1,0 +1,36 @@
+import itertools
+import sys
+
+
+print("Type all the Numbers:  ")
+
+a1 = int(input("A1 =  "))
+b1 = int(input("B1 =  "))
+c1 = int(input("C1 =  "))
+a2 = int(input("A2 =  "))
+b2 = int(input("B2 =  "))
+c2 = int(input("C2 =  "))
+a3 = int(input("A3 =  "))
+b3 = int(input(" B3 =  "))
+c3 = int(input("C3 =  "))
+
+J = [a1,b1,c1]
+K = [a2,b2,c2]
+L = [a3,b3,c3]
+z = [J,K,L]
+
+comb1 = []
+
+i=0
+for combination in itertools.product(J,K,L):
+    comb=list(set(combination))
+    if len(comb)==2:
+        i+=0
+    else:
+        add = sum(comb)
+        comb1.append(add)
+        i+=1
+
+print("There additions generated are ",i)
+print(comb1)
+
