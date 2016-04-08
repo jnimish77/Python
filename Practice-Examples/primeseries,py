@@ -1,0 +1,18 @@
+# Program - 1: "primeseries.py"
+
+import sys
+import itertools
+
+
+number = int(input("Enter the numbers range>>>  "))
+List = []
+for j in range(2,number):
+    for i in range(2, j):
+        if (j%i) == 0:
+            #print(j,"this is not a prime number ")
+            break
+    else:
+        List.append(j)
+        print(j)
+print (List)
+
